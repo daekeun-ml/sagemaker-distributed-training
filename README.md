@@ -1,7 +1,7 @@
 # SageMaker Distributed Training
 ***본 문서는 [SageMaker 분산 훈련 공식 예제](https://github.com/aws/amazon-sagemaker-examples/blob/master/training/distributed_training/index.rst)의 한국어 버전입니다.***
 
-SageMaker 분산 교육 라이브러리는 데이터 병렬(data-parallel) 및 모델 병렬(model-parallel) 훈련 전략을 모두 제공합니다. 소프트웨어 및 하드웨어 기술을 결합하여 GPU 간 및 노드 간 통신을 개선합니다. 훈련 스크립트를 조금만 수정하면 SageMaker의 분산 훈련 기능을 이용할 수 있습니다.
+SageMaker 분산 훈련 라이브러리는 데이터 병렬(data-parallel) 및 모델 병렬(model-parallel) 훈련 전략을 모두 제공합니다. 소프트웨어 및 하드웨어 기술을 결합하여 GPU 간 및 노드 간 통신을 개선합니다. 훈련 스크립트를 조금만 수정하면 SageMaker의 분산 훈련 기능을 이용할 수 있습니다.
 
 ## SageMaker distributed data parallel
 ​
@@ -13,7 +13,7 @@ SDP는 gradient 업데이트를 활용하여 사용자 정의 AllReduce 알고�
 
 많은 양의 데이터로 모델을 훈련할 때 머신 러닝 실무자는 훈련 시간을 줄이기 위해 분산 훈련으로 전환하는 경우가 많습니다. 시간이 중요한 경우에 비즈니스 요구 사항은 가능한 한 빨리 또는 최소한 제한된 기간 내에 훈련을 완료하는 것입니다. 그런 다음 분산 훈련은 여러 노드의 클러스터들을 사용하도록 확장됩니다. 즉, 컴퓨팅 인스턴스의 여러 GPU들이 아니라 여러 GPU들이 있는 여러 인스턴스들을 의미합니다. 하지만, 클러스터 크기가 증가하면 성능이 크게 저하됩니다. 이러한 성능 저하는 주로 클러스터의 노드 간 통신 오버 헤드로 인해 발생합니다.
 
-SageMaker 분산(SMD)은 분산 교육을 위해 SageMaker 모델 병렬(SMP) 및 SageMaker 데이터 병렬(SDP)의 두 가지 옵션을 제공합니다. 이 가이드는 데이터 병렬 전략을 사용하여 모델을 훈련하는 방법에 중점을 둡니다. 더 자세한 내용은 아래 링크를 참조해 주세요.
+SageMaker 분산(SMD)은 분산 훈련을 위해 SageMaker 모델 병렬(SMP) 및 SageMaker 데이터 병렬(SDP)의 두 가지 옵션을 제공합니다. 이 가이드는 데이터 병렬 전략을 사용하여 모델을 훈련하는 방법에 중점을 둡니다. 더 자세한 내용은 아래 링크를 참조해 주세요.
 
 관련 링크 :
 - [SageMaker data parallel developer guide](https://docs.aws.amazon.com/sagemaker/latest/dg/data-parallel.html)
